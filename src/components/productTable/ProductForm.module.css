@@ -1,0 +1,21 @@
+.form{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.icon {
+  background-color: black;
+  color: #eee;
+  font-size: 1.5rem;
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkbox{
+  margin-left: 10px;
+  cursor: pointer;
+}
+

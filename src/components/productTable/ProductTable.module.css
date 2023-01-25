@@ -1,0 +1,60 @@
+.container {
+  padding: 1rem 3rem;
+  width: 100%;
+  padding-top: 70px;
+}
+
+.loading {
+  margin: 200px 45%;
+}
+
+.productsTable {
+  border-collapse: collapse;
+  margin: 25px auto;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  min-width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.productsTable tbody tr td img {
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+}
+
+.productsTable thead tr {
+  background-color: #eee;
+  /* text-align: center; */
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}
+
+.productsTable tr,
+.productsTable th,
+.productsTable td {
+  padding: 0 15px;
+  height: 70px;
+}
+
+.productsTable tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: all 0.2s ease-in;
+}
+/* 
+.productsTable tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+} */
+
+.productsTable tbody tr:last-of-type {
+  border-bottom: 2px solid #000;
+}
+
+.productsTable tbody tr:hover,
+.productsTable tbody tr:focus {
+  background: #f3f3f3;
+}
+
+.productsTable th.sort {
+  cursor: pointer;
+}

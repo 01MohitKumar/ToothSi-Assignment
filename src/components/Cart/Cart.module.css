@@ -1,0 +1,9 @@
+.container {
+  padding: 1rem 3rem;
+  width: 100%;
+  /* padding-top: 70px; */
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}

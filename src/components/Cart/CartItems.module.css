@@ -1,0 +1,88 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.container .msg {
+  margin: 100px auto;
+  font-size: 2rem;
+}
+
+.productsTable {
+  border-collapse: collapse;
+  margin: 25px auto;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  min-width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.productsTable tbody tr td img {
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+}
+
+.productsTable thead tr {
+  background-color: #eee;
+  /* text-align: center; */
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}
+
+.productsTable tr,
+.productsTable th {
+  padding: 12px 15px;
+  height: 80px;
+}
+
+.productsTable tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: all 0.2s ease-in;
+}
+
+/* .productsTable tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+} */
+
+.productsTable tbody tr:last-of-type {
+  border-bottom: 2px solid #000;
+}
+
+.productsTable tbody tr:hover,
+.productsTable tbody tr:focus {
+  background-color: #f3f3f3;
+}
+
+.productsTable .product div {
+  display: flex;
+  gap: 10px;
+}
+
+.productsTable .product button {
+  background-color: transparent;
+  border: none;
+}
+
+.productsTable .actions div {
+  border: 1px solid #ddd;
+  width: fit-content;
+  padding: 0 8px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.productsTable .actions div p {
+  margin: 0;
+  font-size: small;
+}
+.productsTable .actions button {
+  background-color: transparent;
+  border: none;
+  font-size: x-large;
+  font-weight: lighter;
+  margin-bottom: 3px;
+}

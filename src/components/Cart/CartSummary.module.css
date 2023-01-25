@@ -1,0 +1,51 @@
+.card {
+  margin: 25px auto;
+  padding: 1rem;
+  border: 1px solid #bbb;
+  min-width: 350px;
+  max-width: fit-content;
+}
+.card h1 {
+  margin-bottom: 2rem;
+}
+
+.card ul {
+  padding: 0;
+}
+
+.pair {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pair li:first-of-type {
+  font-weight: bold;
+}
+
+.pair li:last-of-type {
+  color: #0275d8;
+}
+
+.amounts .pair {
+  font-size: 0.9rem;
+}
+
+.total .pair {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.ctaBtn {
+  width: 100%;
+  border: none;
+  background-color: #0275d8;
+  font-weight: bold;
+  padding: 8px 0;
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.returnBtn {
+  background-color: gray;
+}
