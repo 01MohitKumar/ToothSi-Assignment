@@ -30,7 +30,7 @@ export const ProductFilter = ({ filterProducts }) => {
 
   useEffect(() => {
     filterProducts(currentProducts);
-  }, [loading]);
+  }, [loading, currentProducts, filterProducts]);
 
   useEffect(() => {
     let filteredItems = currentProducts;
@@ -50,7 +50,7 @@ export const ProductFilter = ({ filterProducts }) => {
       );
     }
     filterProducts([...filteredItems]);
-  }, [filters]);
+  }, [filters, currentProducts, filterProducts]);
 
   return (
     <section className={styles.container}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useProducts } from "../../store/ProductContext";
 import Loading from "./Loading";
 import { ProductFilter } from "../productFilter/ProductFilter";
@@ -21,9 +21,9 @@ export const ProductTable = () => {
 
   // Filtered Product
 
-  const handleFilterProducts = (products) => {
+  const handleFilterProducts = useCallback((products) => {
     setSortedProducts(products);
-  };
+  }, []);
 
   // Sorting Product
 

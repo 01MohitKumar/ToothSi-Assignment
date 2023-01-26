@@ -36,7 +36,7 @@ export const CartItems = () => {
                     >
                       x
                     </button>
-                    <img src={product.image} />
+                    <img src={product.image} alt={product.title} />
                   </div>
                 </td>
                 <td>{product.title.split(" ").slice(0, 4).join(" ")}</td>
