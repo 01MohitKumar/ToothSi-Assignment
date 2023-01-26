@@ -30,7 +30,6 @@ export const ProductProvider = ({ children }) => {
   const fetchProducts = async () => {
     setIsLoading(true);
     const res = await axios.get(api);
-    console.log("from context", res.data);
     setProducts(res.data);
     setIsLoading(false);
   };

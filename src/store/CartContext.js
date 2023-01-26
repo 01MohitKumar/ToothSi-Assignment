@@ -8,13 +8,10 @@ export const useCart = () => {
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
-  //   const [grandTotal, setGrandTotal] = useState(0);
 
   const addItemToCartHandler = (item, enteredAmount) => {
-    console.log("I got run!: ", item, enteredAmount);
     let newItemList = cartItems;
     const foundIdx = newItemList.findIndex((product) => product.id === item.id);
-    console.log("from cart context: ", foundIdx);
     if (foundIdx !== -1) {
       const foundItem = cartItems[foundIdx];
       foundItem.amount = foundItem.amount + Number(enteredAmount);
@@ -28,7 +25,6 @@ export const CartProvider = ({ children }) => {
     }
     // const total = cartItems.reduce((acc, item) => acc + item.subTotal, 0);
     // setGrandTotal(total);
-    console.log("from cart context Grandtotal: ", cartItems);
   };
 
   const removeItemToCartHandler = (productId) => {

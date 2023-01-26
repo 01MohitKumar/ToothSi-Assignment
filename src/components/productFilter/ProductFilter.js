@@ -40,13 +40,11 @@ export const ProductFilter = ({ filterProducts }) => {
       );
     }
     if (filters.price !== "") {
-      console.log("from price: ", filters.price);
       filteredItems = filteredItems.filter(
         (product) => product.price <= Number(filters.price)
       );
     }
     if (filters.search !== "" && filters.search.length > 0) {
-      console.log("from filter: Search Term: ", filters.search);
       filteredItems = filteredItems.filter((product) =>
         product.title.toLowerCase().includes(filters.search.toLowerCase())
       );
@@ -106,7 +104,6 @@ export const ProductFilter = ({ filterProducts }) => {
           </Link>
         </div>
       </form>
-      {console.log("from filter: ", currentProducts, " & ", categories)}
     </section>
   );
 };

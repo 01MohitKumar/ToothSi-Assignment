@@ -60,10 +60,5 @@ export const CartItems = () => {
       </table>
     );
 
-  return (
-    <section className={styles.container}>
-      {content}
-      {console.log("From Cart Items: ", cartItems)}
-    </section>
-  );
+  return <section className={styles.container}>{content}</section>;
 };

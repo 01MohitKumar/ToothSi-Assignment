@@ -6,7 +6,6 @@ import { useCart } from "../../store/CartContext";
 import styles from "./ProductForm.module.css";
 
 export default function ProductForm({ product }) {
-  console.log("from Product Form: ", product);
   const { addItemToCartHandler } = useCart();
   const [amount, setAmount] = useState(1);
 

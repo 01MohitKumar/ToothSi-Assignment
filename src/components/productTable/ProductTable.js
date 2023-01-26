@@ -13,7 +13,6 @@ let sortCategoryAscending = true;
 
 export const ProductTable = () => {
   const { currentProducts, loading } = useProducts();
-  console.log("from table: ", currentProducts);
   const [sortedProducts, setSortedProducts] = useState([]);
 
   useEffect(() => {
@@ -69,8 +68,6 @@ export const ProductTable = () => {
       </tbody>
     </table>
   );
-
-  console.log("from product table", currentProducts);
 
   return (
     <>

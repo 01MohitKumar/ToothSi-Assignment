@@ -4,7 +4,6 @@ import ProductForm from "./ProductForm";
 export default function ProductItem({ product }) {
   return (
     <tr key={product.id}>
-      {/* {console.log("pi: ", product)} */}
       <td>
         <img src={product.image} />
       </td>
