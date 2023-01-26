@@ -58,3 +58,10 @@
 .productsTable th.sort {
   cursor: pointer;
 }
+
+@media screen and (max-width: 910px) {
+  .container{
+    padding-top: 100px;
+  }
+
+}

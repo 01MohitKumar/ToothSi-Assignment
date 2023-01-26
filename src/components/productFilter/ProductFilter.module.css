@@ -7,6 +7,10 @@
   z-index: 1;
 }
 
+.left{
+  display: flex;
+}
+
 .container form {
   display: flex;
   justify-content: space-between;
@@ -43,4 +47,32 @@
   color: #0275d8;
   margin-right: 2px;
   transform: scaleX(-1);
+}
+
+@media screen and (max-width: 910px) {
+  .container form .right input {
+    padding: 4px 8px;
+    margin-left: 0.5rem;
+    background-color: #eee;
+    border: 1px #ddd solid;
+  }
+
+  .container form .right input:hover,
+  .container form .right input:focus {
+    outline: none;
+  }
+
+  .container form .right button {
+    padding: 6px 10px;
+    margin-left: 0.5rem;
+    background-color: #0275d8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  .selectWrapper{
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+  }
 }

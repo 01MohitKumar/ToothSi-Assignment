@@ -10,7 +10,7 @@ export const ProductFilter = ({ filterProducts }) => {
 
   const [filters, setFilters] = useState({
     category: "",
-    size: "",
+    price: "",
     search: "",
   });
 
@@ -23,7 +23,7 @@ export const ProductFilter = ({ filterProducts }) => {
   const resetFilters = () => {
     setFilters({
       category: "",
-      size: "",
+      price: "",
       search: "",
     });
   };
@@ -39,9 +39,10 @@ export const ProductFilter = ({ filterProducts }) => {
         (product) => product.category === filters.category
       );
     }
-    if (filters.size !== "") {
+    if (filters.price !== "") {
+      console.log("from price: ", filters.price);
       filteredItems = filteredItems.filter(
-        (product) => product.size === filters.size
+        (product) => product.price <= Number(filters.price)
       );
     }
     if (filters.search !== "" && filters.search.length > 0) {
@@ -57,27 +58,29 @@ export const ProductFilter = ({ filterProducts }) => {
     <section className={styles.container}>
       <form>
         <div className={styles.left}>
-          <select
-            name="category"
-            onChange={handleChange}
-            value={filters.category}
-          >
-            <option value="">Category</option>
-            {categories.map((category) => {
-              return (
-                <option key={category} value={category}>
-                  {category}
-                </option>
-              );
-            })}
-          </select>
-          <select name="size" onChange={handleChange} value={filters.size}>
-            {/* <option value="">All</option> */}
-            <option value="">Size</option>
-            <option value="s">S</option>
-            <option value="m">M</option>
-            <option value="x">X</option>
-          </select>
+          <div className={styles.selectWrapper}>
+            <select
+              name="category"
+              onChange={handleChange}
+              value={filters.category}
+            >
+              <option value="">Category</option>
+              {categories.map((category) => {
+                return (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                );
+              })}
+            </select>
+            <select name="price" onChange={handleChange} value={filters.price}>
+              {/* <option value="">All</option> */}
+              <option value="">Price</option>
+              <option value="1000">less than $1000</option>
+              <option value="100">less than $100</option>
+              <option value="10">less than $10</option>
+            </select>
+          </div>
           <button
             className={styles.resetBtn}
             type="button"
