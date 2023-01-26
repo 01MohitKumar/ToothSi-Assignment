@@ -14,7 +14,7 @@ export const CartProvider = ({ children }) => {
     const foundIdx = newItemList.findIndex((product) => product.id === item.id);
     if (foundIdx !== -1) {
       const foundItem = cartItems[foundIdx];
-      foundItem.amount = foundItem.amount + Number(enteredAmount);
+      foundItem.amount = Number(foundItem.amount) + Number(enteredAmount);
       foundItem.subTotal = foundItem.amount * foundItem.price;
       setCartItems([...cartItems]);
     } else {
