@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 
 import axios from "axios";
 
@@ -18,14 +18,14 @@ export const ProductProvider = ({ children }) => {
 
   const [filteredProducts, setFilteredProducts] = useState([]);
 
-  const foundCategories = () => {
+  const foundCategories = useCallback(() => {
     const foundCategories = new Set();
     products.forEach((product) => {
       if (!foundCategories.has(product.category))
         foundCategories.add(product.category);
     });
     return Array.from(foundCategories);
-  };
+  }, [products]);
 
   const fetchProducts = async () => {
     setIsLoading(true);
@@ -40,7 +40,7 @@ export const ProductProvider = ({ children }) => {
 
   useEffect(() => {
     setCategories(foundCategories);
-  }, [loading]);
+  }, [loading, foundCategories]);
 
   // Get Current posts
   const indexOfLastProduct = currentPage * productsPerPage;
