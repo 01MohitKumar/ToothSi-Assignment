@@ -45,6 +45,8 @@ export const ProductTable = () => {
 
   const content = loading ? (
     <Loading classes={styles.loading} />
+  ) : sortedProducts.length === 0 ? (
+    <p>There is no product with current filter please reset.</p>
   ) : (
     <table className={styles.productsTable}>
       <thead>
@@ -73,7 +75,7 @@ export const ProductTable = () => {
     <>
       <ProductFilter filterProducts={handleFilterProducts} />
       <section className={styles.container}>{content}</section>
-      <Pagination />
+      {sortedProducts.length > 0 && <Pagination />}
     </>
   );
 };
